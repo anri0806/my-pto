@@ -46,6 +46,8 @@ function Login() {
         />
         <button>Login</button>
       </form>
+      <br />
+      <p>Don't have an account? Sign up</p>
     </div>
   );
 }
