@@ -19,7 +19,7 @@ function App() {
     <div className="App">
       <NavBar />
       {currentUser ? (
-        <MainPage />
+        <MainPage currentUser={currentUser} />
       ) : (
         <Routes>
           <Route path="/" element={<Login onLogin={handleLogin} />} />
