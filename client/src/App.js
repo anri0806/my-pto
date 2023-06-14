@@ -5,14 +5,19 @@ import MainContainer from "./components/MainContainer";
 
 import "./App.css";
 
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import { useState } from "react";
+
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
 
+  const navigate = useNavigate()
+
   function handleLogin(user) {
     setCurrentUser(user);
+
+    navigate("/home")
   }
 
   return (
