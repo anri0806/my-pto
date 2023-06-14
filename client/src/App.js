@@ -1,7 +1,7 @@
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import NavBar from "./components/NavBar";
-import MainPage from "./components/MainPage";
+import MainContainer from "./components/MainContainer";
 
 import "./App.css";
 
@@ -17,9 +17,9 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar />
+      <NavBar currentUser={currentUser} />
       {currentUser ? (
-        <MainPage currentUser={currentUser} />
+        <MainContainer currentUser={currentUser} />
       ) : (
         <Routes>
           <Route path="/" element={<Login onLogin={handleLogin} />} />

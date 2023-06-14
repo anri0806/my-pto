@@ -1,8 +1,8 @@
-
+import Profile from "./Profile";
 
 function MainPage({ currentUser }) {
   return (
-    <div>
+    <div style={{ marginTop: "10%" }}>
       <h1>Hello, {currentUser.username}!</h1>
       <p>Vacation available/ used: </p>
       <p>Holiday available/ used: </p>
