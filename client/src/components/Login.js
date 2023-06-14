@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-function Login() {
+function Login({ onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [correctLogin, setCorrectLogin] = useState(false);
 
   const login = { username: "Anri", password: "123123" };
 
@@ -12,8 +11,13 @@ function Login() {
     e.preventDefault();
 
     if (username === login.username && password === login.password) {
-      setCorrectLogin(true);
-      console.log("successfully logged in");
+      const user = {
+        username: username,
+        password: password,
+      };
+
+      onLogin(user);
+      
     } else {
       console.log("wrong info");
     }
