@@ -24,6 +24,7 @@ function Login() {
 
   return (
     <div>
+      <br />
       <h1>My PTO</h1>
       <p>
         My PTO is a Paid Time Off tracker for managing your vacations and
