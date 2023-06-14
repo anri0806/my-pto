@@ -5,9 +5,14 @@ function NavBar({ currentUser }) {
     <div>
       <h2 style={{ textAlign: "left", margin: "0" }}>Logo</h2>
       {currentUser ? (
-        <>
-          <Link to="/profile" style={{ float: "right" }}>Profile</Link>
-        </>
+        <div style={{ float: "right" }}>
+          <Link to="/home" style={{ paddingRight: "10px" }}>
+            Home
+          </Link>
+          <Link to="/profile">
+            Profile
+          </Link>
+        </div>
       ) : null}
     </div>
   );
