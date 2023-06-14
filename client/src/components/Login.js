@@ -5,7 +5,7 @@ function Login({ onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const login = { username: "Anri", password: "123123" };
+  const login = { username: "Anri", password: "test123123" };
 
   function handleSubmit(e) {
     e.preventDefault();

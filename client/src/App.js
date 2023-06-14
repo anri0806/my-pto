@@ -8,21 +8,28 @@ import "./App.css";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   function handleLogin(user) {
     setCurrentUser(user);
 
-    navigate("/home")
+    navigate("/home");
   }
 
+  function handleLogout() {
+    setCurrentUser(null);
+
+    // Check here!
+    navigate("/");
+  }
+
+  
   return (
     <div className="App">
-      <NavBar currentUser={currentUser} />
+      <NavBar currentUser={currentUser} onLogout={handleLogout} />
       {currentUser ? (
         <MainContainer currentUser={currentUser} />
       ) : (
