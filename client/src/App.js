@@ -22,8 +22,10 @@ function App() {
   function handleLogout() {
     setCurrentUser(null);
 
+    console.log("logged out")
     // Check here!
-    navigate("/");
+    // navigate("/");
+    window.location.href = "/";
   }
 
   
