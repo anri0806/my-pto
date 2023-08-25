@@ -8,6 +8,8 @@ import "./App.css";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
+import { Doughnut } from "react-chartjs-2";
+
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
 
@@ -22,13 +24,12 @@ function App() {
   function handleLogout() {
     setCurrentUser(null);
 
-    console.log("logged out")
+    console.log("logged out");
     // Check here!
     // navigate("/");
     window.location.href = "/";
   }
 
-  
   return (
     <div className="App">
       <NavBar currentUser={currentUser} onLogout={handleLogout} />
@@ -40,6 +41,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
         </Routes>
       )}
+
     </div>
   );
 }
